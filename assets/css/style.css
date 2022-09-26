@@ -4,7 +4,7 @@
 
 body {
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 20px;
     background-color: rgb(252, 240, 223);
@@ -12,30 +12,33 @@ body {
 
 header {
     display: inline-flex;
+    flex: 100%;
     justify-content: space-between;
     padding-top: 15px;
-    padding-bottom: 30px;
-    
+    padding-bottom: 15px;
+    background-color: orange;
 }
 
 header h1 {
     font-size: 40px;
     padding-left: 15px;
+    padding-right: 15px;
 }
 
-nav {
+header nav {
+
     font-size: 24px;
-    font-weight: 500;
+    font-weight: 400;
     color: darkblue;
     padding-top: 8px;
     padding-right: 15px;
 }
 
-nav a {
-    padding: 15px;
+header nav a {
+    margin: 10px; 
 }
 
-.divider {
+hr {
     border: none;
     background-color: darkblue;
     height: 10px;
@@ -46,44 +49,81 @@ nav a {
 
 h2 {
     font-size: 30px;
-}
-
-figure {
-    display: inline-flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    background-color: aqua;
 }
 
 .photo img{
-    max-height: 500px;
-    width: auto;
+    max-width: 100%;
     justify-content: flex-start;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .AboutMe{
-    flex-wrap: wrap;
-    padding-right: 100px;
-    padding-left: 100px;
+    padding-right: 10px;
+    padding-left: 10px;
     padding-top: 10px;
     text-align: center;
-    justify-content: center;
-
-}
-
-.AboutMe h2{
-    /* flex-direction: column; */
-    margin-top: 15px;
-    margin-bottom: 15px;
 }
 
 .AboutMe p{
     font-size: 24px;
 }
 
-.projects {
 
+
+/* Projects start here */
+/* Projects start here */
+/* Projects start here */
+
+.projects {
+    display: flex;
+    flex-direction: row;
+    background-color: lightcoral;
+}
+
+/* first project card should be larger than all others */
+#first-card {
+    flex: 2 50%;
+    border: solid;
+    background-color: orange;
+}
+
+#first-card img {
+    max-width: 100%;
+}
+
+.card {
+    /* justify-content: space-evenly; */
+    flex: 1 25%;
+    padding: 3%;
+    margin: 4%;
+    border-style: solid;
+    color: darkblue;
+    background-color: orange;
 }
 
 footer {
-    
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin-right: 20px;
+}
+
+footer h2 {
+    margin-bottom: 5px;
+}
+
+footer li {
+    padding: 2px;
+}
+
+@media screen and (max-width: 992px) {
+
+}
+
+@media screen and (max-width: 768px) {
+
 }
