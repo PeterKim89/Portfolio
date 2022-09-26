@@ -26,7 +26,6 @@ header h1 {
 }
 
 header nav {
-
     font-size: 24px;
     font-weight: 400;
     color: darkblue;
@@ -47,11 +46,13 @@ hr {
 
 }
 
+/* .AboutMe  */
 h2 {
     font-size: 30px;
     margin-top: 15px;
     margin-bottom: 15px;
-    background-color: aqua;
+    /* background-color: aqua; */
+    text-align: center;
 }
 
 .photo img{
@@ -72,37 +73,30 @@ h2 {
     font-size: 24px;
 }
 
-
-
-/* Projects start here */
-/* Projects start here */
-/* Projects start here */
-
 .projects {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
+    width: 90%;
+    margin-right: 5%;
+    margin-left: 5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
     background-color: lightcoral;
-}
+    justify-content: center;
+}   
 
-/* first project card should be larger than all others */
-#first-card {
-    flex: 2 50%;
-    border: solid;
-    background-color: orange;
-}
-
-#first-card img {
-    max-width: 100%;
+.card1 {
+    display: block;
+    flex-basis: 30%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 .card {
-    /* justify-content: space-evenly; */
-    flex: 1 25%;
-    padding: 3%;
-    margin: 4%;
-    border-style: solid;
-    color: darkblue;
-    background-color: orange;
+    display: block;
+    flex-basis: 30%;
+    padding: 10px;
+    box-sizing: border-box;
 }
 
 footer {
@@ -110,10 +104,12 @@ footer {
     flex-direction: column;
     text-align: right;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 footer h2 {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    text-align: right;
 }
 
 footer li {
@@ -121,9 +117,13 @@ footer li {
 }
 
 @media screen and (max-width: 992px) {
-
+    .card {
+        flex-basis: 50%;
+    }
 }
 
 @media screen and (max-width: 768px) {
-
+    .card {
+        flex-basis: 100%;
+    }
 }
