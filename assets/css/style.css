@@ -1,12 +1,13 @@
 :root {
-
+    --general-padding: 15px;
+    --general-margin: 15px;
 }
 
 body {
     display: flex;
     flex-wrap: wrap;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 20px;
+    font-size: 24px;
     background-color: rgb(252, 240, 223);
 }
 
@@ -14,63 +15,62 @@ header {
     display: inline-flex;
     flex: 100%;
     justify-content: space-between;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
     background-color: orange;
 }
 
 header h1 {
     font-size: 40px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: var(--general-padding);
+    padding-right: var(--general-padding);
 }
 
 header nav {
-    font-size: 24px;
-    font-weight: 400;
-    color: darkblue;
+    font-weight: 700;
     padding-top: 8px;
-    padding-right: 15px;
+    padding-right: var(--general-padding);
+    
 }
 
 header nav a {
-    margin: 10px; 
+    margin: var(--general-margin);
 }
 
 hr {
     border: none;
     background-color: darkblue;
     height: 10px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: var(--general-margin);
+    margin-bottom: var(--general-margin);
 
 }
 
 /* .AboutMe  */
 h2 {
     font-size: 30px;
-    margin-top: 15px;
-    margin-bottom: 15px;
+    margin-top: var(--general-margin);
+    margin-bottom: var(--general-margin);
     /* background-color: aqua; */
     text-align: center;
 }
 
 .photo img{
-    max-width: 100%;
+    max-width: 50%;
     justify-content: flex-start;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: var(--general-padding);
+    padding-right: var(--general-padding);
 }
 
 .AboutMe{
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-top: 10px;
+    padding-right: var(--general-padding);
+    padding-left: var(--general-padding);
+    padding-top: var(--general-padding);
     text-align: center;
 }
 
 .AboutMe p{
-    font-size: 24px;
+    margin-top: var(--general-margin);
 }
 
 .projects {
@@ -79,8 +79,8 @@ h2 {
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: var(--general-padding);
+    padding-bottom: var(--general-padding);
     background-color: lightcoral;
     justify-content: center;
 }   
@@ -88,14 +88,14 @@ h2 {
 .card1 {
     display: block;
     flex-basis: 30%;
-    padding: 10px;
+    padding: var(--general-padding);
     box-sizing: border-box;
 }
 
 .card {
     display: block;
     flex-basis: 30%;
-    padding: 10px;
+    padding: var(--general-padding);
     box-sizing: border-box;
 }
 
@@ -103,12 +103,12 @@ footer {
     display: flex;
     flex-direction: column;
     text-align: right;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    margin-right: var(--general-margin);
+    margin-bottom: var(--general-margin);
 }
 
 footer h2 {
-    margin-bottom: 10px;
+    margin-bottom: var(--general-margin);
     text-align: right;
 }
 
