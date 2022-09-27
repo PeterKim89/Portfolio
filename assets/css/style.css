@@ -1,6 +1,7 @@
 :root {
     --general-padding: 15px;
     --general-margin: 15px;
+    --font-weight: 700;
 }
 
 body {
@@ -46,12 +47,10 @@ hr {
 
 }
 
-/* .AboutMe  */
 h2 {
     font-size: 30px;
     margin-top: var(--general-margin);
     margin-bottom: var(--general-margin);
-    /* background-color: aqua; */
     text-align: center;
 }
 
@@ -85,18 +84,25 @@ h2 {
     justify-content: center;
 }   
 
-.card1 {
-    display: block;
+.card {
+    flex-direction: column;
+    display:flex;
     flex-basis: 30%;
     padding: var(--general-padding);
-    box-sizing: border-box;
+    border: solid darkblue medium;
 }
 
-.card {
-    display: block;
-    flex-basis: 30%;
-    padding: var(--general-padding);
-    box-sizing: border-box;
+.card a {
+    display: flex;
+    justify-content: center;
+}
+
+.card p {
+    display: flex;
+    font-size: 30px;
+    font-weight: var(--font-weight);
+    color: darkblue;
+    justify-content: center;   
 }
 
 footer {
