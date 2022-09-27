@@ -1,5 +1,7 @@
 :root {
+    /* common padding value used throughout */
     --general-padding: 15px;
+    /* common margin value used throughout */
     --general-margin: 15px;
     --font-weight: 700;
 }
@@ -13,6 +15,7 @@ body {
 }
 
 header {
+    /* Puts h1 and nav on opposite ends, but keeps them inline */
     display: inline-flex;
     flex: 100%;
     justify-content: space-between;
@@ -38,13 +41,13 @@ header nav a {
     margin: var(--general-margin);
 }
 
+/* darkblue horizontal lines to help divide up the page's sections */
 hr {
     border: none;
     background-color: darkblue;
     height: 10px;
     margin-top: var(--general-margin);
     margin-bottom: var(--general-margin);
-
 }
 
 h2 {
@@ -55,8 +58,7 @@ h2 {
 }
 
 .photo img{
-    max-width: 50%;
-    justify-content: flex-start;
+    max-width: 70%;
     padding-left: var(--general-padding);
     padding-right: var(--general-padding);
 }
@@ -72,21 +74,27 @@ h2 {
     margin-top: var(--general-margin);
 }
 
+/* the overall container for the project cards */
 .projects {
+    /* enabling flexbox and flex-wrap */
     display: flex;
     flex-wrap: wrap;
+    /* 90% width to allow for side borders/margins */
     width: 90%;
     margin-right: 5%;
     margin-left: 5%;
     padding-top: var(--general-padding);
     padding-bottom: var(--general-padding);
     background-color: lightcoral;
+    /* centering the overall container */
     justify-content: center;
 }   
 
 .card {
+    /* flex-direction: column so I can have the .card h3 on top of the cards, instead of side by side */
+    display: flex;    
     flex-direction: column;
-    display:flex;
+    /* flex-basis: 30%, to have 3 cards per row at full screen */
     flex-basis: 30%;
     padding: var(--general-padding);
     border: solid darkblue medium;
@@ -97,7 +105,7 @@ h2 {
     justify-content: center;
 }
 
-.card p {
+.card h3 {
     display: flex;
     font-size: 30px;
     font-weight: var(--font-weight);
@@ -122,12 +130,14 @@ footer li {
     padding: 2px;
 }
 
+/* when screen starts shrinking, change dynamic to 2 cards per row */
 @media screen and (max-width: 992px) {
     .card {
         flex-basis: 50%;
     }
 }
 
+/* for mobile, change to a single column */
 @media screen and (max-width: 768px) {
     .card {
         flex-basis: 100%;
